@@ -1,0 +1,333 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>cn.kevinkda.demo.api.module</groupId>
+    <artifactId>api-module-pay-alipay-20210112</artifactId>
+    <version>${system.main.version}-${system.flag.version}</version>
+
+    <name>api-module-pay-alipay-20210112</name>
+    <description>Demo project for Spring Boot</description>
+    <url>https://github.com/kevinkda/DemoProjects/</url>
+
+
+    <organization>
+        <url>https://github.com/kevinkda</url>
+        <name>Kevin KDA</name>
+    </organization>
+
+    <inceptionYear>2021</inceptionYear>
+
+    <licenses>
+        <license>
+            <name>The Apache License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <id>kevin</id>
+            <name>Kevin Tang</name>
+            <url>https://www.kevinkda.cn</url>
+            <email>kevin_kda@yahoo.com.au</email>
+            <organization>Kevin KDA</organization>
+            <organizationUrl>https://github.com/kevinkda</organizationUrl>
+            <timezone>UTC+08:00</timezone>
+            <roles>
+                <role>developer</role>
+                <role>admin</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>cmrhyq</id>
+            <name>Yuqiao Huang</name>
+            <url>https://cmr.kevinkda.cn</url>
+            <email>kevin_kda@yahoo.com.au</email>
+            <organization>Kevin KDA</organization>
+            <organizationUrl>https://github.com/cmrhyq</organizationUrl>
+            <timezone>UTC+08:00</timezone>
+            <roles>
+                <role>developer</role>
+                <role>admin</role>
+            </roles>
+        </developer>
+        <developer>
+            <id>XiaoSir</id>
+            <name>Xiao Chen</name>
+            <url>https://xiaosir.kevinkda.cn</url>
+            <email>kevin_kda@yahoo.com.au</email>
+            <organization>Kevin KDA</organization>
+            <organizationUrl>https://github.com/XiaoSir126</organizationUrl>
+            <timezone>UTC+08:00</timezone>
+            <roles>
+                <role>developer</role>
+                <role>admin</role>
+            </roles>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git@github.com:kevinkda/DemoProjects.git</connection>
+        <developerConnection>
+            scm:git:scm:git:git@github.com:kevinkda/DemoProjects.git
+        </developerConnection>
+        <url>https://github.com/kevinkda/DemoProjects</url>
+        <tag>DemoProjects</tag>
+    </scm>
+
+    <issueManagement>
+        <system>Github</system>
+        <url>https://github.com/kevinkda/DemoProjects/issues</url>
+    </issueManagement>
+
+    <ciManagement>
+        <system>Travis</system>
+        <url>https://travis-ci.com/github/kevinkda/DemoProjects</url>
+    </ciManagement>
+
+
+    <properties>
+        <!--Version-->
+        <system.main.version>0.0.3</system.main.version>
+        <system.sub.version>1078</system.sub.version>
+        <system.flag.version>SNAPSHOT</system.flag.version>
+
+        <!--Java & Spring Boot-->
+        <java.version>1.8</java.version>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <spring-boot.version>2.3.7.RELEASE</spring-boot.version>
+        <spring-restdocs.version>2.0.5.RELEASE</spring-restdocs.version>
+
+        <!--Maven-->
+        <org.apache.maven.plugins.compiler>3.8.1</org.apache.maven.plugins.compiler>
+        <org.apache.commons.io.version>[2.6,]</org.apache.commons.io.version>
+        <org.asciidoctor.maven.plugin>1.5.8</org.asciidoctor.maven.plugin>
+
+        <!--ORM-->
+        <org.mybatis.spring.boot.starter>[2.1.4,]</org.mybatis.spring.boot.starter>
+
+
+        <!--Alibaba Tool-->
+        <com.taobao.arthas.version>[3.4.5,]</com.taobao.arthas.version>
+        <com.alibaba.fastjson>[1.2.74,]</com.alibaba.fastjson>
+        <com.alibaba.druid.spring.boot.starter>[1.2.0,]</com.alibaba.druid.spring.boot.starter>
+        <com.alibaba.testable.version>0.4.2</com.alibaba.testable.version>
+
+        <!--Alipay-->
+        <com.alipay.sdk.easysdk.version>[2.1.2,]</com.alipay.sdk.easysdk.version>
+        <com.alipay.sdk.java.version>[4.11.8.ALL,]</com.alipay.sdk.java.version>
+
+        <!--Self Tool-->
+        <cn.kevinkda.core.util.java.utils>[0.0.1-RELEASE,2.0.0-RELEASE]</cn.kevinkda.core.util.java.utils>
+
+    </properties>
+
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-batch</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-freemarker</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-jdbc</artifactId>
+        </dependency>
+        <!--        <dependency>-->
+        <!--            <groupId>org.springframework.boot</groupId>-->
+        <!--            <artifactId>spring-boot-starter-thymeleaf</artifactId>-->
+        <!--        </dependency>-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>${com.alibaba.fastjson}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>${org.mybatis.spring.boot.starter}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-devtools</artifactId>
+            <scope>runtime</scope>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <scope>runtime</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+            <exclusions>
+                <exclusion>
+                    <groupId>org.junit.vintage</groupId>
+                    <artifactId>junit-vintage-engine</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.batch</groupId>
+            <artifactId>spring-batch-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.restdocs</groupId>
+            <artifactId>spring-restdocs-mockmvc</artifactId>
+            <scope>test</scope>
+        </dependency>
+
+
+        <!-- https://mvnrepository.com/artifact/com.alipay.sdk/alipay-easysdk -->
+        <dependency>
+            <groupId>com.alipay.sdk</groupId>
+            <artifactId>alipay-easysdk</artifactId>
+            <version>${com.alipay.sdk.easysdk.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.alipay.sdk/alipay-sdk-java -->
+        <dependency>
+            <groupId>com.alipay.sdk</groupId>
+            <artifactId>alipay-sdk-java</artifactId>
+            <version>${com.alipay.sdk.java.version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid-spring-boot-starter</artifactId>
+            <version>${com.alibaba.druid.spring.boot.starter}</version>
+        </dependency>
+        <dependency>
+            <groupId>cn.kevinkda</groupId>
+            <artifactId>java-utils</artifactId>
+            <version>${cn.kevinkda.core.util.java.utils}</version>
+            <scope>compile</scope>
+        </dependency>
+
+    </dependencies>
+
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-dependencies</artifactId>
+                <version>${spring-boot.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+            </resource>
+        </resources>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${org.apache.maven.plugins.compiler}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <encoding>${project.build.sourceEncoding}</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.asciidoctor</groupId>
+                <artifactId>asciidoctor-maven-plugin</artifactId>
+                <version>${org.asciidoctor.maven.plugin}</version>
+                <executions>
+                    <execution>
+                        <id>generate-docs</id>
+                        <phase>prepare-package</phase>
+                        <goals>
+                            <goal>process-asciidoc</goal>
+                        </goals>
+                        <configuration>
+                            <backend>html</backend>
+                            <doctype>book</doctype>
+                        </configuration>
+                    </execution>
+                </executions>
+                <dependencies>
+                    <dependency>
+                        <groupId>org.springframework.restdocs</groupId>
+                        <artifactId>spring-restdocs-asciidoctor</artifactId>
+                        <version>${spring-restdocs.version}</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <version>${spring-boot.version}</version>
+                <configuration>
+                    <mainClass>cn.kevinkda.demo.api.module.pay.alipay.b20210112.ApiModulePayAlipay20210112Application
+                    </mainClass>
+                </configuration>
+                <executions>
+                    <execution>
+                        <id>repackage</id>
+                        <goals>
+                            <goal>repackage</goal>
+                        </goals>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
+        </repository>
+        <!--        <repository>-->
+        <!--            <id>github</id>-->
+        <!--            <name>GitHub OWNER Apache Maven Packages</name>-->
+        <!--            <url>https://maven.pkg.github.com/kevinkda/maven-open-project</url>-->
+        <!--        </repository>-->
+    </distributionManagement>
+
+</project>

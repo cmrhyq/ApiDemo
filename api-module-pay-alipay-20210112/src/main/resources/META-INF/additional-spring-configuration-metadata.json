@@ -1,0 +1,94 @@
+{
+  "properties": [
+    {
+      "name": "gateway.payment.url",
+      "type": "java.lang.String",
+      "description": "Description for gateway.payment.url."
+    },
+    {
+      "name": "gateway.payment.alipay.app.uid",
+      "type": "java.lang.String",
+      "description": "Description for gateway.payment.alipay.app.uid."
+    },
+    {
+      "name": "gateway.payment.alipay.app.app-id",
+      "type": "java.lang.String",
+      "description": "Description for gateway.payment.alipay.app.app-id."
+    },
+    {
+      "name": "gateway.payment.alipay.key.sign-type",
+      "type": "java.lang.String",
+      "description": "Description for gateway.payment.alipay.key.sign-type."
+    },
+    {
+      "name": "gateway.payment.alipay.key.rsa-pubilc-key",
+      "type": "java.lang.String",
+      "description": "Description for gateway.payment.alipay.key.rsa-pubilc-key."
+    },
+    {
+      "name": "gateway.payment.alipay.key.rsa-private-key",
+      "type": "java.lang.String",
+      "description": "Description for gateway.payment.alipay.key.rsa-private-key."
+    },
+    {
+      "name": "gateway.payment.alipay.key.alipay-public-key",
+      "type": "java.lang.String",
+      "description": "Description for gateway.payment.alipay.key.alipay-public-key."
+    },
+    {
+      "name": "gateway.payment.alipay.key.aes-key",
+      "type": "java.lang.String",
+      "description": "Description for gateway.payment.alipay.key.aes-key."
+    },
+    {
+      "name": "gateway.payment.alipay.url.notify-url",
+      "type": "java.lang.String",
+      "description": "Description for gateway.payment.alipay.url.notify-url."
+    },
+    {
+      "name": "gateway.payment.alipay.url.return-url",
+      "type": "java.lang.String",
+      "description": "Description for gateway.payment.alipay.url.return-url."
+    },
+    {
+      "name": "gateway.payment.alipay.url.gateway-url",
+      "type": "java.lang.String",
+      "description": "Description for gateway.payment.alipay.url.gateway-url."
+    },
+    {
+      "name": "gateway.payment.alipay.config.charset",
+      "type": "java.lang.String",
+      "description": "Description for gateway.payment.alipay.config.charset."
+    },
+    {
+      "name": "gateway.payment.alipay.config.max-query-retry",
+      "type": "java.lang.Integer",
+      "description": "Description for gateway.payment.alipay.config.max-query-retry."
+    },
+    {
+      "name": "gateway.payment.alipay.config.query-duration",
+      "type": "java.lang.Long",
+      "description": "Description for gateway.payment.alipay.config.query-duration."
+    },
+    {
+      "name": "gateway.payment.alipay.config.max-cancel-retry",
+      "type": "java.lang.Integer",
+      "description": "Description for gateway.payment.alipay.config.max-cancel-retry."
+    },
+    {
+      "name": "gateway.payment.alipay.config.cancel-duration",
+      "type": "java.lang.Long",
+      "description": "Description for gateway.payment.alipay.config.cancel-duration."
+    },
+    {
+      "name": "gateway.payment.alipay.log.log-path",
+      "type": "java.lang.String",
+      "description": "Description for gateway.payment.alipay.log.log-path."
+    },
+    {
+      "name": "gateway.payment.alipay.log.format",
+      "type": "java.lang.String",
+      "description": "Description for gateway.payment.alipay.log.format."
+    }
+  ]
+}

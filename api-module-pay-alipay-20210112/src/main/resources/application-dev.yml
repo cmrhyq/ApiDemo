@@ -1,0 +1,50 @@
+server:
+  port: 8201
+
+management:
+  server:
+    port: 8301
+
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    name: defaultDataSource
+    password: Karry0921
+    url: jdbc:mysql://bj.kevinkda.cn:3306/public_opinion_202012?Timezone=UTC&allowPublicKeyRetrieval=true
+    username: kevin
+
+self:
+  eureka:
+    profiles:
+      port: 8108
+  swagger:
+    enable: true
+
+gateway:
+  payment:
+    alipay:
+      app:
+        uid: 2088102180959805
+        app-id: 2016102500755084
+      key:
+        sign-type: RSA2
+        rsa-pubilc-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAsDbJNkmBTMZK0y3Qf7U7HS37Ny5mpGg2KKXHsvyqKAhebxuP0RGo29qsCmb8ZXYJ0zP6UYk59VS5ZslDOJ3n/YPqIv7kDtII1lmlimXTagK1rGhzuO8HJvo6ffQhcwaP4BycqOGbwgvhfFcUTAPFH2Yq/GUC4WZuux8QsYM8NCSuvvO0+8ZXSHNJcv1bXtrMK0WwSnax+hpeyzcHp2mqUAxjjw98qz8s68xNe1BDj6h7a6TEQB5+SsHmS0n8YtJqxEeSbk80hecDmn9B3vJBqn1HuXmk0BkcrkGlSpBsNBKm2/YFgCBCR8U6fy5ZVLXKfCk8+FZJ+t+ihBteYfKRqwIDAQAB
+        rsa-private-key: MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCwNsk2SYFMxkrTLdB/tTsdLfs3LmakaDYopcey/KooCF5vG4/REajb2qwKZvxldgnTM/pRiTn1VLlmyUM4nef9g+oi/uQO0gjWWaWKZdNqArWsaHO47wcm+jp99CFzBo/gHJyo4ZvCC+F8VxRMA8UfZir8ZQLhZm67HxCxgzw0JK6+87T7xldIc0ly/Vte2swrRbBKdrH6Gl7LNwenaapQDGOPD3yrPyzrzE17UEOPqHtrpMRAHn5KweZLSfxi0mrER5JuTzSF5wOaf0He8kGqfUe5eaTQGRyuQaVKkGw0Eqbb9gWAIEJHxTp/LllUtcp8KTz4Vkn636KEG15h8pGrAgMBAAECggEBAIs63oT8UyOcUabGPkWJpqmJmUKicQtaI+C+DCnKJY/3/NWBS4L/lxIPl3uon6hzOZQdL52Y9ah4Rv2F7I0hhxnyTt9T0lI7diwXLQtLJV5Pwcf1x+nJQzdy4yB98qf1+Vw0fzuY9v69cG5UR39AQ1Jp4XEHRt1dmARVqVT4wmrXdpyrlxtwGhluXXgPn3jG+M8ODQZs4f6zevtW74mISe9zbbUpXMvCfhWVBJ7qwnYQfRMdW12AV0+Pj5F6R3FlqfVj9n1RS544X2zFO9aMpl6RKqTZtVOoKzGKCBbounzAis4JD55WhFgfIlSGCBN1zEGomH1OukGIr6/hfZAGRdECgYEA8cy8Qo3mumRR9AAv8bfmtkhU6bYFKalteruXgCYrMf/wTrtAoH7HfzC67XzSTEtmatKFnHiDSjEoxOGrGRJ5120mPmpQA8Vipz4CSgy0WZoGPCCCra7hDnGn7o/ydSowM9X2jtd7S41TuwgjXYDHcdY1kXgXcVYx/MQptI+w148CgYEAupAFkzOXB70pLhqCtEquHOqb63zpVCFisiJrfxQL0YKjdOwOmwxiv1IGwTMRSM4+qvIUDyKzxSvizCgRC7JJgpDVqzfMj69w8XsCCE4SYHCdSNnlFnJrIXq87OYFBEBC5SxIi2VjYsRacppZiasG0cs72UVrCT/cEFDKpk3A9iUCgYBA6N4M27z5gl7Bqp80O1Ly0f4Bczx1j6b1EJC99QEZfgRLjlbt/rqdOT6k7CIkGwWWXYdCltNfwkyYdaARrfUJUKK4lJ+AM6elD69bo4dymjdcQrnx2AVQdFBJaVkD/NxNvf1fIRdXE8xLZAbiXeSseX2N3Hgmk6X9ncc4Um59nwKBgAcrt/sjdX+npqiN/k4dvLmBzwJrJ7DDI78DEaytwZKI+e1pkVomTLlb1sSgSN7KhqAdc+XtCIngmPQN6jHP5YFuPbg6CdPQA4BUoQxeq9gnG/SL44FMXo/H3vEgGjtCmQ+j9xnciMhoEa3r/tsKxtVTgXZlc6rEWJoL8O4ZePw9AoGBAMUo3zn/BBfOIyD/AG8o84lS4TSreYcBQRHcvAlqhuDhA1FIsaTqQsytd3rwpKJwRSUKROIBJnujHgleoEkeETFUk0KKs9N/IN/fjqmmT010uBRaxxLyVmXHpZewLElELc6R4hfFyi6eVB1mExeehKCHKgNHmjUOqIgWgF1NhT10
+        alipay-public-key: MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAgnLS1HUGWaRI/FTeJ46XTRGH30cKcjEwsv4ZvO17wqMbAGYVIl7TYOEgP8SO8kdFVyLDzaVQASFrWYiJpYVL6G+/ZJ2jfz4AbTAixOilYxF3guzSGOKFhvxs+6nIOdZOu4CL/mI/+0EtlliTFJQS2fk/9It0PgCl9udZUn8YnNtiBlZXpC4hK4Xz0etuEVWDDSLS5wcgFW/zgBAGprDQHeROhu102okr0cQtVP0CfKbrMttfV66dZWdJngxI33/kghUaZi/mqxbLd/U6fZHfVJggAmtSFph97DSifY4AqAZNyOVoi6aWr4IXkwpzpIuJke55Dwbv5sPkUYKjFmF9EwIDAQAB
+        aes-key: kqfAE+TTDkKs3jr34yXqBw==
+      url:
+        notify-url: ${gateway.payment.url}/v1/payment/alipay/gateway
+        return-url: ${gateway.payment.url}/v1/payment/alipay/callback
+        gateway-url: https://openapi.alipaydev.com/gateway.do
+      config:
+        charset: utf-8
+        max-query-retry: 5
+        query-duration: 5000
+        max-cancel-retry: 3
+        cancel-duration: 3000
+      log:
+        log-path: /opt/log/payment/gateway/
+        format: json
+
